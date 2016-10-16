@@ -21,8 +21,8 @@ angular.module("Store")
 		};
 
 		// Populate the category array
-		var setCategories = function(categories) {
-			categories.push(categories);
+		var setCategories = function(category) {
+			categories.push(category);
 		};
 
 		// Return an http request to fetch data later
