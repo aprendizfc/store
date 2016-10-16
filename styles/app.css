@@ -1,0 +1,133 @@
+html,
+body {
+	font-family: "Roboto", sans-serif;
+}
+/*=======
+HEADER
+=======*/
+.header {
+	position: relative;
+	height: 180px;
+	background-color: #f8cb00;
+	padding-top: 30px;
+}
+.header::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 5px;
+	background-color: #6364D8;
+}
+.header .navbar-brand {
+	color: #fff;
+	font-size: 2em;
+	font-weight: 500;
+}
+/*======
+BODY
+======*/
+.body {
+	position: relative;
+	margin-top: -56px;
+}
+.body .top-separator {
+	margin-top: 30px;
+}
+.body .search-bar,
+.body .category-filter {
+	display: block;
+	width: 100%;
+	height: 45px;
+	background-color: #fff;
+	border: 1px solid transparent;
+	border-radius: .3em;
+	transition: border .3s ease;
+}
+.body .search-bar:focus,
+.body .category-filter:focus {
+	outline: none;
+	border-color: #6364d8;
+}
+.body .search-bar {
+	background-image: url("../images/search.svg");
+	background-repeat: no-repeat;
+	background-position: 10px;
+	padding-left: 37px;
+}
+.body .my-cart {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 45px;
+	line-height: 45px;
+	font-size: .9em;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #fff;
+	background-color: #6364d8;
+	background-image: url("../images/shopping_cart.png");
+	background-repeat: no-repeat;
+	background-position: 10px;
+	background-size: 20px;
+	padding-left: 39px;
+	border-radius: .3em;
+}
+.body .my-cart .counter {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #393ab1;
+	padding: 0 10px;
+	border-radius: 0 .3em .3em 0;
+}
+/*=============
+PRODUCTS LIST
+=============*/
+.products-list .product {
+	margin-bottom: 30px;
+}
+.products-list article {
+	position: relative;
+	overflow: hidden;
+	width: 90%;
+	margin: 0 auto;
+	border: 1px solid #eee;
+	box-shadow: 0 0 12px rgba(221, 221, 221, .6);
+}
+.products-list article:hover .short-product-detail {
+	transform: translateY(-30px);
+}
+.products-list article:hover .add-to-cart {
+	transform: translateY(-40px);
+}
+.products-list .short-product-detail {
+	position: relative;
+	transform: translateY(10px);
+	padding: 20px 10px;
+	transition: transform .3s ease;
+}
+.products-list .name {
+	color: #4d4d4d;
+	font-size: 1.2em;
+}
+.products-list .price {
+	color: #f8cb00;
+	font-size: 1.1em;
+	font-weight: 500;
+}
+.products-list .add-to-cart {
+	position: absolute;
+	display: block;
+	background: #6364d8;
+	color: #fff;
+	width: 100%;
+	padding: 10px 0;
+	text-transform: uppercase;
+	font-weight: 500;
+	text-decoration: none;
+	transform: translateY(10px);
+	transition: transform .3s ease;
+}
