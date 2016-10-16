@@ -1,6 +1,5 @@
 angular.module("Store")
 	.controller("ProductsCtrl", ["$scope", "productsService", function ProductsCtrl($scope, productsService) {
-		$scope.products = [];
 		$scope.myCart = productsService.getProductsInCart();
 
 		// Retrieve products from json file
@@ -8,6 +7,8 @@ angular.module("Store")
 			.then(function(response) {
 				productsService.setProducts(response.data.products);
 				$scope.products = productsService.getProducts();
+				productsService.setCategories(response.data.categories);
+				$scope.categories = productsService.getCategories();
 			});
 
 		// Add the selected product to the cart array
