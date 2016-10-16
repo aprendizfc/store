@@ -16,7 +16,7 @@
 			</div>
 			<div class="col-md-2">
 				<div class="form-group">
-					<a href="#" class="my-cart">
+					<a ui-sref="my-cart" class="my-cart">
 						my cart
 						<span class="counter">{{ myCart.length }}</span>
 					</a>
@@ -36,6 +36,6 @@
 						<a href="javascript:void(0);" ng-click="addToCart(product)" class="add-to-cart text-center">add to cart</a>
 					</article>
 				</li>
-			</ul>
+			</ul> <!-- END .products-list -->
 		</div> <!-- END .row -->
 	</section> <!-- END .body -->
