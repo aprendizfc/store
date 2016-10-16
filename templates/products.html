@@ -10,7 +10,7 @@
 				<div class="form-group">
 					<select name="categories" id="categories" class="category-filter">
 						<option value="">All categories</option>
-						<option value="{{ category.categori_id }}" ng-repeat="category in categories">{{ category.name }}</option>
+						<option value="{{ category.categori_id }}" ng-repeat="category in categories[0]">{{ category.name }}</option>
 					</select>
 				</div>
 			</div>
