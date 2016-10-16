@@ -2,6 +2,9 @@ html,
 body {
 	font-family: "Roboto", sans-serif;
 }
+.top-separator {
+	margin-top: 30px;
+}
 /*=======
 HEADER
 =======*/
@@ -31,9 +34,6 @@ BODY
 .body {
 	position: relative;
 	margin-top: -56px;
-}
-.body .top-separator {
-	margin-top: 30px;
 }
 .body .search-bar,
 .body .category-filter {
