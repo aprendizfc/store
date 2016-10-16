@@ -1,0 +1,17 @@
+<section class="container">
+	<div class="row top-separator">
+		<!-- Products list -->
+		<ul class="list-unstyled products-list">
+			<li class="col-sm-6 col-md-3 product" ng-repeat="product in cartProducts">
+				<article>
+					<img ng-src="{{ product.img }}" class="img-responsive" alt="">
+					<div class="short-product-detail text-center">
+						<p class="name">{{ product.name }}</p>
+						<span class="price">{{ product.price }}</span>
+					</div>
+					<a href="javascript:void(0);" ng-click="deleteFromCart($index)" class="add-to-cart text-center">delete</a>
+				</article>
+			</li>
+		</ul> <!-- END .products-list -->
+	</div> <!-- END .row -->
+</section> <!-- body -->
