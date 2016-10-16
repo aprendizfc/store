@@ -103,10 +103,13 @@ PRODUCTS LIST
 .products-list article:hover .add-to-cart {
 	transform: translateY(-40px);
 }
+.products-list img {
+	margin: 0 auto 30px auto;
+}
 .products-list .short-product-detail {
 	position: relative;
 	transform: translateY(10px);
-	padding: 20px 10px;
+	padding: 0 10px 20px 10px;
 	transition: transform .3s ease;
 }
 .products-list .name {
