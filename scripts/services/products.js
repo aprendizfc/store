@@ -43,6 +43,11 @@ angular.module("Store")
 			productsInCart.push(product);
 		};
 
+		// Delete a single product to the cart array
+		var deleteProductFromCart = function(product) {
+			productsInCart.splice(product, 1);
+		};
+
 		return {
 			fetchProducts: fetchProducts,
 			getProducts: getProducts,
@@ -50,6 +55,7 @@ angular.module("Store")
 			getCategories: getCategories,
 			setCategories: setCategories,
 			getProductsInCart: getProductsInCart,
-			addToCart: addToCart
+			addToCart: addToCart,
+			deleteProductFromCart: deleteProductFromCart
 		}
 	}])
