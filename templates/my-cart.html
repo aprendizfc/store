@@ -7,7 +7,7 @@
 					<img ng-src="{{ product.img }}" class="img-responsive" alt="">
 					<div class="short-product-detail text-center">
 						<p class="name">{{ product.name }}</p>
-						<span class="price">{{ product.price }}</span>
+						<span class="price">{{ product.price | currency }}</span>
 					</div>
 					<a href="javascript:void(0);" ng-click="deleteFromCart($index)" class="add-to-cart text-center">delete</a>
 				</article>
