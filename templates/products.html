@@ -48,7 +48,7 @@
 		<div class="row top-separator">
 			<!-- Products list -->
 			<ul class="list-unstyled products-list">
-				<li class="col-sm-6 col-md-3 product" ng-repeat="product in products[0] | filter: { name: searchBarFilter } | filterByCategory: categoryFilter | orderBy: sortOrder">
+				<li class="col-sm-6 col-md-3 product" ng-repeat="product in products[0] | filter: { name: searchBarFilter } | filterByCategory: categoryFilter | orderBy: sortOrder as filtered_result">
 					<article>
 						<img ng-src="{{ product.img }}" class="img-responsive" alt="">
 						<div class="short-product-detail text-center">
@@ -65,5 +65,6 @@
 					</article>
 				</li>
 			</ul> <!-- END .products-list -->
+			<div class="no-results" ng-if="!filtered_result.length">No matches found! =(</div>
 		</div> <!-- END .row -->
 	</section> <!-- END .body -->
