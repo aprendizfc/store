@@ -40,13 +40,29 @@ angular.module("Store")
 
 		// Add a single product to the cart array
 		var addToCart = function(product) {
-			productsInCart.push(product);
+			// If the product is not in the cart, add it
+			if( !isInCart(product) ) {
+				productsInCart.push(product);
+				return;
+			}
+			dialog.show("This product is already in the cart");
 		};
 
 		// Delete a single product to the cart array
 		var deleteProductFromCart = function(product) {
 			productsInCart.splice(product, 1);
 		};
+
+		// Check wether or not a product is in the cart
+		var isInCart = function(obj) {
+			var products = getProductsInCart();
+			for (var i = 0; i < products.length; i++) {
+				if( products[i] === obj ) {
+					return true;
+				}
+			}
+			return false;
+		}
 
 		return {
 			fetchProducts: fetchProducts,
