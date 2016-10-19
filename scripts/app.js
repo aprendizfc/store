@@ -11,6 +11,11 @@ angular.module("Store", ["ui.router"])
 				templateUrl: "./templates/products.html",
 				controller: "ProductsCtrl"
 			})
+			.state("item", {
+				url: "/item/:productId",
+				templateUrl: "./templates/product-detail.html",
+				controller: "ProductDetailCtrl"
+			})
 			.state("my-cart", {
 				url: "/my-cart",
 				templateUrl: "./templates/my-cart.html",
