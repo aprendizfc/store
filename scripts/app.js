@@ -38,5 +38,22 @@ var Dialog = function() {
 			dialog.style.display = "none";
 		}
 	}
-}
+};
+var Toast = function() {
+	var toast = document.querySelector(".toast");
+	return {
+		show: function(msg) {
+			toast.innerHTML = msg;
+			toast.classList.add("active");
+			this.close();
+		},
+		close: function() {
+			setTimeout(function() {
+				toast.innerHTML = "";
+				toast.classList.remove("active");
+			}, 3000);
+		}
+	}
+};
 var dialog = new Dialog();
+var toast = new Toast();
