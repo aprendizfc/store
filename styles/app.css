@@ -276,5 +276,6 @@ TOAST
 .toast.active {
 	visibility: visible;
 	opacity: 1;
+	-webkit-transform: translate(-50%, -60px);
 	transform: translate(-50%, -60px);
 }
