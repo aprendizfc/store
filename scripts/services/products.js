@@ -25,6 +25,21 @@ angular.module("Store")
 			categories.push(category);
 		};
 
+		var getProductById = function(id) {
+			var products = getProducts();
+			// Get the first array
+			products = products[0];
+			// Convert our param from string to integer
+			var paramInt = parseInt(id)
+
+			for (var i = 0; i < products.length; i++) {
+				if (products[i].id === paramInt) {
+					// Return the object which id matches the param
+					return products[i];
+				}
+			}
+		};
+
 		// Return an http request to fetch data later
 		var fetchProducts = function() {
 			return $http({
@@ -70,6 +85,7 @@ angular.module("Store")
 			setProducts: setProducts,
 			getCategories: getCategories,
 			setCategories: setCategories,
+			getProductById: getProductById,
 			getProductsInCart: getProductsInCart,
 			addToCart: addToCart,
 			deleteProductFromCart: deleteProductFromCart
