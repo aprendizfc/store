@@ -254,3 +254,27 @@ DIALOG
 .dialog .confirm:hover {
 	text-decoration: none;
 }
+/*=====
+TOAST
+=====*/
+.toast {
+	padding: .1em .7em;
+	position: fixed;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 100;
+	top: 100%;
+	left: 50%;
+	-webkit-transform: translate(-50%, 0);
+	transform: translate(-50%, 0);
+	background: rgba(0, 0, 0, .5);
+	border-radius: 1em;
+	color: rgba(255, 255, 255, .8);
+	-webkit-transition: all .2s ease;
+	transition: all .2s ease;
+}
+.toast.active {
+	visibility: visible;
+	opacity: 1;
+	transform: translate(-50%, -60px);
+}
