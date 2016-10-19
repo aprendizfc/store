@@ -124,7 +124,7 @@ PRODUCTS LIST
 	transform: translateY(-40px);
 }
 .products-list .show-details {
-	cursor: pointer;
+	display: block;
 }
 .products-list img {
 	margin: 0 auto 30px auto;
