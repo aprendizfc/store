@@ -1,5 +1,9 @@
 <section class="container body product-detail">
-	<div class="row">
+	<div class="cart-wrapper visible-xs visible-sm">
+		<a ui-sref="my-cart" class="my-cart"></a>
+		<span class="counter">{{ myCart.length }}</span>
+	</div>
+	<div class="row hidden-xs hidden-sm">
 		<div class="col-md-2 pull-right">
 			<div class="form-group">
 				<a ui-sref="my-cart" class="my-cart">
@@ -10,7 +14,7 @@
 		</div>
 	</div>
 	<div class="row top-separator">
-		<div class="col-md-6">
+		<div class="col-md-6 col-sm-6">
 			<div class="row">
 				<div class="col-md-6">
 					<img ng-src="{{ product.img }}" class="img-responsive product-img" alt="Product Image">
