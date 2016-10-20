@@ -1,11 +1,15 @@
 <section class="body container">
+	<div class="cart-wrapper visible-xs visible-sm">
+		<a ui-sref="my-cart" class="my-cart"></a>
+		<span class="counter">{{ myCart.length }}</span>
+	</div>
 	<div class="row">
 		<div class="col-md-4 col-md-offset-1">
 			<div class="form-group">
 				<input type="search" placeholder="Type a product name" class="search-bar" ng-model="searchBarFilter">
 			</div>
 		</div>
-		<div class="col-md-2">
+		<div class="col-md-2 col-xs-6">
 			<div class="form-group">
 				<select name="categories"
 						id="categories"
@@ -24,7 +28,7 @@
 				</select>
 			</div>
 		</div>
-		<div class="col-md-2">
+		<div class="col-md-2 col-xs-6">
 			<div class="form-group">
 				<select name="order-by" id="orderBy" ng-model="sortOrder">
 					<option value="">order by</option>
@@ -35,7 +39,7 @@
 				</select>
 			</div>
 		</div>
-		<div class="col-md-2">
+		<div class="col-md-2 hidden-xs hidden-sm">
 			<div class="form-group">
 				<a ui-sref="my-cart" class="my-cart">
 					my cart
