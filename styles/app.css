@@ -47,6 +47,16 @@ BODY
 	position: relative;
 	margin-top: -56px;
 }
+.body .spinner {
+	width: 100px;
+	height: 100px;
+	position: fixed;
+	top: 60%;
+	left: 50%;
+	margin-top: -50px;
+	margin-left: -50px;
+	z-index: 30;
+}
 .body input[type="search"],
 .body select {
 	display: block;
