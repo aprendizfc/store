@@ -322,6 +322,9 @@ MEDIA QUERIES
 		border-radius: 50%;
 		font-weight: 500;
 	}
+	.products-list img {
+		margin-bottom: 0;
+	}
 	.product-detail .top-separator {
 		margin-top: 92px;
 	}
