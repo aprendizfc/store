@@ -2,6 +2,7 @@ angular.module("Store")
 	.controller("ProductsCtrl", ["$scope", "productsService", function ProductsCtrl($scope, productsService) {
 		$scope.myCart = productsService.getProductsInCart();
 		$scope.categoryFilter = "all";
+		$scope.loading = true;
 
 		// Retrieve products from json file
 		productsService.fetchProducts()
@@ -23,6 +24,11 @@ angular.module("Store")
 				$scope.products = productsService.getProducts();
 				productsService.setCategories(categories);
 				$scope.categories = productsService.getCategories();
+
+				// Hide spinner
+				$scope.loading = false;
+			}, function(error) {
+				$scope.loading = false;
 			});
 
 		// Add the selected product to the cart array
