@@ -1,8 +1,11 @@
 <section class="body container">
+	<div class="spinner" ng-show="loading">
+		<img src="images/spinner.gif" alt="">
+	</div> <!-- END .spinner -->
 	<div class="cart-wrapper visible-xs visible-sm">
 		<a ui-sref="my-cart" class="my-cart"></a>
 		<span class="counter">{{ myCart.length }}</span>
-	</div>
+	</div> <!-- END .cart-wrapper -->
 	<div class="row">
 		<div class="col-md-4 col-md-offset-1">
 			<div class="form-group">
